@@ -135,6 +135,9 @@
             if (urlParams.get('rom')) {
                 console.log(`Loading ROM from URL: roms/${urlParams.get('rom')}`);
                 run(false, urlParams.get('rom'));
+            } else {
+                console.log(`Loading default ROM: roms/NSMB.nds`);
+                run(false, "NSMB.nds");
             }
 
             async function run(upload, file) {
